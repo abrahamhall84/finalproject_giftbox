@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
   
   validates :username, :email, uniqueness: true
   validates :password, length: {minimum: 4}
-  validates :first_name, :last_name, :phone, :address, presence: true
+  validates :first_name, :last_name, :phone_number, :address, presence: true
 end
