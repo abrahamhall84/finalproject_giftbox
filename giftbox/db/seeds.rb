@@ -15,7 +15,7 @@ user6 = user.create(first_name:'June', last_name: 'Blume', email: 'juneblume@ema
 user7 = user.create(first_name:'Mike', last_name: 'Bikes', email: 'mikeyb@email.com', address: '123 up street', username: 'mikeybikey', password: 'pass123')
 user8 = user.create(first_name:'Jerry', last_name: 'Ferry', email: 'jerfer@email.com', address: '21 jump street', username: 'jerfer', password: 'pass123')
 user9 = user.create(first_name:'Jenny', last_name: 'Penny', email: 'jpenny@email.com', address: '123 side street', username: 'jpenny', password: 'pass123')
-user510 = user.create(first_name:'Andrew', last_name: 'Pandrew', email: 'andypandy@email.com', address: '123 abc street', username: 'andpand', password: 'pass123')
+user10 = user.create(first_name:'Andrew', last_name: 'Pandrew', email: 'andypandy@email.com', address: '123 abc street', username: 'andpand', password: 'pass123')
 
 Item.create(product: 'apples', want_quantity: '4', pick_up: 'a', user_id:  user7.id)
 Item.create(product: 'apples', give_quantity: '36', drop_off_time: 'c', user_id: user3.id)
