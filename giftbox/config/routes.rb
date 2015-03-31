@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
 
 
+  # get 'user_sessions/index'
+
   # get 'items/index'
 
   # get 'items/new'
