@@ -1,27 +1,4 @@
 Rails.application.routes.draw do
- 
-
-
-
-  # get 'user_sessions/index'
-
-  # get 'items/index'
-
-  # get 'items/new'
-
-  # get 'items/show'
-
-  # get 'items/edit'
-
-  # get 'homepage/index'
-
-  # get 'users/index'
-
-  # get 'users/new'
-
-  # get 'users/show'
-
-  # get 'users/edit'
 
   root :to => 'homepage#index'
   resources :user_sessions
