@@ -8,7 +8,11 @@ class UsersController < ApplicationController
       @user.role = 'giftee'
     end 
     if @user.save
+        if @user.role == 'gifter'
         redirect_to 
+       elsif @user.role == 'giftee'
+        redirect_to 
+        end
     else 
         render :new
     end
@@ -55,6 +59,11 @@ class UsersController < ApplicationController
 
     def show
         @giftee = Giftee.find_by_id(params[:id])
+        @products = Items.all where params[:product]
+        @products = Items.sort_by params[:drop_off]
+         if params[:drop_off] == 'a'
+
+
     end
 
     def edit
