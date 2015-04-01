@@ -7,6 +7,7 @@ class UserSessionsController < ApplicationController
     user = User.new user_params
       if user.save where :role == "gifter"
         session[:user_id] = user.id
+        session[:role] = "gifter"
         redirect_to home_path, notice: "Success!" 
       elsif user.save where :role == "giftee"
         session[:user_id] = user.id
@@ -18,8 +19,8 @@ class UserSessionsController < ApplicationController
 
   def attempt_login
     if params[:username].present? && params[:password].present?
-      found_gifter = User.where(username: params[:username]).first
-      found_giftee = User.where(username: params[:username]).first
+      found_gifter = User.where(username: params[:username] && role: params[:role]).first
+      found_giftee = User.where(username: params[:username] && role: params[:role]).first
       if found_gifter
         authorized_gifter = found_gifter.authenticate(params[:password])
           if authorized_gifter
