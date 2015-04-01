@@ -9,11 +9,12 @@
   <%= f.input :phone_number %>
   <%= f.input :username %>
   <%= f.input :password%>
-
-<%= simple_form_for @user do |f| %>
-  f.input_field :name
-  f.input_field :remember_me, as: :boolean, boolean_style: :inline
-
+  <br>
+  
+  f.input_field :Role
+  f.input_field :giftee, as: :boolean,
+  f.input_field :gifter, as: :boolean, 
+  boolean_style: :inline
 
   <%= f.button :submit %>
 <% end %>

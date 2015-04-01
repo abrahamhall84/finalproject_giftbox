@@ -15,6 +15,9 @@ class UsersController < ApplicationController
     else 
         render :new
     end
+    def edit
+        @user = User.find_by_id(params[:id])
+    end
   end 
 
  class Gifter < User
@@ -27,10 +30,6 @@ class UsersController < ApplicationController
     end
 
     def show
-        @gifter = Gifter.find_by_id(params[:id])
-    end
-
-    def edit
         @gifter = Gifter.find_by_id(params[:id])
     end
     def update

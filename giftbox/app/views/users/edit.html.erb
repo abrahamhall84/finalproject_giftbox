@@ -1,2 +1,55 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+
+<div class="container">
+
+  <h2 class ="text-center">Edit Profile</h2>
+  <br>
+
+  <%= simple_form_for(@user, url: edit_user_path(@user.id), defaults: { error_html: { id: 'error' } }, :html => { :class => "form-group"}) do |f|%>
+
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.input :first_name, label: "First Name: "%>
+        <br>
+      </div>
+      <div class="col-md-3" col-md-offset-1>
+        <%= f.input :last_name, label: "Last Name: "%>
+        <br>
+      </div>
+      <div class="col-md-3">
+        <%= f.input :email, label: "Email Address: "%>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.input :address, label: "Address: "%>
+        <br>
+      </div>
+      <div class="col-md-3" col-md-offset-1>
+        <%= f.input :phone_number, label: "Phone Number: "%>
+        <br>
+      </div>
+      <div class="col-md-3">
+        <%= f.input :username, label: "username: "%>
+        <br>
+      </div>
+      <div class="row">
+      <div class="col-md-3">
+        <%= f.input :password, label: "password: "%>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class = "col-md-2">
+        <%= link_to('Cancel', user_path(@user), {class: "btn btn-primary"}) %>
+      </div>
+      <div class ="col-md-2 col-md-offset-4">
+        <%= f.submit "Save Changes", class: 'btn btn-primary' %>
+      </div>
+      <% end %>
+    </div>
+  
+
+
+  
+  
