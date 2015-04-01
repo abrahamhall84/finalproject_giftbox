@@ -29,10 +29,10 @@
     <h1 class = "loginHeading">The Giftbox</h1>
       </div>
     </div>
-   <%= simple_form_for @user do |f| %>
+   <%= simple_form_for login_path do |f| %>
     <%= f.input :username %>
     <%= f.input :password %>
-    <%= f.button :submit %> -->
+    <%= f.button :submit %>
 <% end %>
   
   <br>
