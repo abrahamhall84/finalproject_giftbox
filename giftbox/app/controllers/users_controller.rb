@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_role_type
+
   def create
     @user= User.new user_params
     if @role == 'gifter'
@@ -92,7 +92,7 @@ class UsersController < ApplicationController
   def set_role_type
     # We ensure that the account_type coming from the registration form is valid
     raise 'Error message OR for validation error' unless %w[gifter giftee].include? params[:role]
-    @role = params[:role]
+    @user.role = params[:role]
   end
 
 
