@@ -13,9 +13,7 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "/auth/facebook" do %> Login with Facebook <%= image_tag("FBicon.png") %> <% end %></li>
-        </ul>
+        
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -26,9 +24,17 @@
     <br>
     <br>
     <br>
+  <div class = "row">
   <div class=".col-xs-12">
     <h1 class = "loginHeading">The Giftbox</h1>
-  </div>
+      </div>
+    </div>
+   <%= simple_form_for @user do |f| %>
+    <%= f.input :username %>
+    <%= f.input :password %>
+    <%= f.button :submit %> -->
+<% end %>
+  
   <br>
   <br>
   <br>
