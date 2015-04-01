@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_action :set_role_type
   def create
     @user= User.new user_params
     if @role == 'gifter'

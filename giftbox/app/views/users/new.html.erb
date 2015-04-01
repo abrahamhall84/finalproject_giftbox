@@ -1,2 +1,21 @@
 <h1>Users#new</h1>
 <p>Find me in app/views/users/new.html.erb</p>
+
+<%= simple_form_for @user do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :username %>
+  <%= f.input :password%>
+
+<%= simple_form_for @user do |f| %>
+  f.input_field :name
+  f.input_field :remember_me, as: :boolean, boolean_style: :inline
+
+
+  <%= f.button :submit %>
+<% end %>
+
+<% end %>
