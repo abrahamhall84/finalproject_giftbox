@@ -1,17 +1,17 @@
 class UsersController < ApplicationController
+    def new
+        @user = User.new
+    end
   def create
-    @user= User.new user_params
-    if @role == 'gifter'
+    @user = User.new user_params
+    if @user.role where value == 'gifter'
       @user.role = 'gifter'
-    elsif @role == 'giftee'
+      @user.role.save
+      redirect_to user_path
+    elsif @user.role where value == 'giftee' 
       @user.role = 'giftee'
-    end 
-    if @user.save
-        if @user.role == 'gifter'
-        redirect_to 
-       elsif @user.role == 'giftee'
-        redirect_to 
-        end
+      @user.role.save
+      redirect_to user_path 
     else 
         render :new
     end
@@ -90,7 +90,7 @@ class UsersController < ApplicationController
   def set_role_type
     # We ensure that the account_type coming from the registration form is valid
     raise 'Error message OR for validation error' unless %w[gifter giftee].include? params[:role]
-    @role = params[:role]
+    @user.role = params[:role]
   end
 
 

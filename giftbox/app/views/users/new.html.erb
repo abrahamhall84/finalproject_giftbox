@@ -1,7 +1,7 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Users new</h1>
 
-<%= simple_form_for @user do |f| %>
+
+<%= simple_form_for @user, :url => users_path, :method => :post do |f| %>
   <%= f.input :first_name %>
   <%= f.input :last_name %>
   <%= f.input :email %>
@@ -9,14 +9,13 @@
   <%= f.input :phone_number %>
   <%= f.input :username %>
   <%= f.input :password%>
-  <br>
-  
-  f.input_field :Role
-  f.input_field :giftee, as: :boolean,
-  f.input_field :gifter, as: :boolean, 
-  boolean_style: :inline
+
+  <%= f.label :role, value = 'Gifter' %>
+  <%= f.check_box :role %>
+  <%= f.label :role, value = 'Giftee' %>
+  <%= f.check_box :role %>
 
   <%= f.button :submit %>
 <% end %>
 
-<% end %>
+

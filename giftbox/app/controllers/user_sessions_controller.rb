@@ -4,7 +4,7 @@ class UserSessionsController < ApplicationController
   end
 
   def create
-    user = User.new user_params
+    @user = User.create user_params
       if user.save where :role == "gifter"
         session[:user_id] = user.id
         session[:role] = "gifter"
