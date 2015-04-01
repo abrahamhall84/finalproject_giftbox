@@ -1,2 +1,19 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Users new</h1>
+
+
+<%= simple_form_for @user, :url => users_path, :method => :post do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :username %>
+  <%= f.input :password%>
+  <%= f.label :role, value = 'Gifter' %>
+  <%= f.check_box :role %>
+  <%= f.label :role, value = 'Giftee' %>
+  <%= f.check_box :role %>
+  <%= f.button :submit %>
+<% end %>
+
+
