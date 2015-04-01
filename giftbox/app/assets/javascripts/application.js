@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$( "#user_dropdown" ).click(function() {
+
+  var product = $( "#product" ).val();
+  var quantity = $( "#quantity" ).val() || [];
+  var drop_off = $( "#drop_off").val();
+
+  $( "ul" ).append( "<li>" + product + " " + quantity + " " + drop_off + "</li>");
+});
+

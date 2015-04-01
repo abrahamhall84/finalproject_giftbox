@@ -30,6 +30,7 @@ class UsersController < ApplicationController
     end
 
     def show
+        @giftee = Giftee.find_by_id(params[:id])
         @gifter = Gifter.find_by_id(params[:id])
     end
     def update

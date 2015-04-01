@@ -1,16 +1,37 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
 
-<%if @user.role == 'gifter' %>
+<%if @user.is_gifter %>
 
-<div></div>
-<p></p>
-<% elseif @user.role == "giftee" %>
-<div></div>
+<div class = "user_dropdown">
+    <p>Item to Donate</p>
+    <div class = "product">
+    <%= f.input :product, :collection => ['Apple','Orange','Lemon','Carrot','Tomato'] %>
+    </div>
+  </div>
+    <p>Quantity</p>
+    <div class = "quantity">
+    <%= f.input :give_quantity %>
+    </div>
+    <p>Drop Off Day/Time</p>
+    <div class = "drop_off">
+    <%= f.input :drop_off, :collection => ['Tues/6 p.m.','Thurs/6 p.m.'] %>
+     </div>
+</div>
+    <br>
+    <br>
+    <ul></ul>
+
+<% else  %>
+<div class = "user_dropdown">
+
+  <p>Item Requested</p>
+  <%= f.input :product, :collection => ['Apple','Orange','Lemon','Carrot','Tomato'] %>
+  <p>Quantity</p>
+  <%= f.input :want_quantity %>
+  <p>Pick Up Day/Time</p>
+  <%= f.input :pick_up, :collection => ['Wed/7 p.m.','Thurs/7 p.m.'] %>
+</div>
+  <br>
+  <br>
+  <ul></ul>
 
 <% end %>
-
-
-
-append form of quantity, item, drop_off time (product), (drop off time)
-

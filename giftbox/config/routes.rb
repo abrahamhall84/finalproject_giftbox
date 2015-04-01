@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :items
   end
  
-  post 'login' => 'user_sessions#attemp_login', :as => :login
+  post 'login' => 'user_sessions#attempt_login', :as => :login
   post 'logout' => 'user_sessions#logout', :as => :logout
   # devise_for :user
 #    Prefix Verb   URI Pattern                              Controller#Action
