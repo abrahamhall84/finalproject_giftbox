@@ -1,4 +1,5 @@
 
+
 <%if @user.is_gifter %>
 
 <div class = "user_dropdown">
@@ -20,7 +21,15 @@
     <br>
     <ul></ul>
 
-<% else  %>
+
+<div>THIS USER IS A GIFTER</div>
+
+<% else%>
+<div>THIS USER IS A GIFTEE</div>
+
+
+
+
 <div class = "user_dropdown">
 
   <p>Item Requested</p>
@@ -34,4 +43,6 @@
   <br>
   <ul></ul>
 
+
 <% end %>
+

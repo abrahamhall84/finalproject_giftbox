@@ -1,8 +1,6 @@
 class ItemsController < ApplicationController
   def index
     @items = Items.all
-    if 
-
   end
 
   def new

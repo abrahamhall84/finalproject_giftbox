@@ -10,10 +10,8 @@
   <%= f.input :username %>
   <%= f.input :password%>
 
-  <%= f.label :role, value = 'Gifter' %>
-  <%= f.check_box :role %>
-  <%= f.label :role, value = 'Giftee' %>
-  <%= f.check_box :role %>
+  <%= f.label :is_gifter, 'Gifter' %>
+  <%= f.radio_button :is_gifter, "Gifter" %>
 
   <%= f.button :submit %>
 <% end %>
