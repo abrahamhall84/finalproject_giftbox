@@ -16,8 +16,8 @@ class ItemsController < ApplicationController
   end
   def calculate_product
     @item_sum = Items.all where params[:product] && params[:drop_off] do 
-    if params[:product] == 'apples' && params[:want_quantity] == 'a' where 
-      
+    if params[:product] == 'apples' && params[:give_quantity] == 'a' where 
+
 
 
   end 
