@@ -8,7 +8,7 @@ Rails.application.routes.draw do
  
   post 'login' => 'user_sessions#attemp_login', :as => :login
   post 'logout' => 'user_sessions#logout', :as => :logout
-
+  devise_for :user
 #    Prefix Verb   URI Pattern                              Controller#Action
 #              root GET    /                                        homepage#index
 #     user_sessions GET    /user_sessions(.:format)                 user_sessions#index

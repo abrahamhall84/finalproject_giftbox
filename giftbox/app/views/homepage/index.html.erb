@@ -1,2 +1,168 @@
-<h1>Homepage#index</h1>
-<p>Find me in app/views/homepage/index.html.erb</p>
+<%= render 'partials/header' %>
+<%= render "partials/navbar" %>
+
+
+<div class="std_background">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class = "navbar-header">
+        <a class="navbar-brand" href="#">The GiftBox</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+
+  <div class="splash_background">
+    <br>
+    <br>
+    <br>
+  <div class = "row">
+  <div class=".col-xs-12">
+    <h1 class = "loginHeading">The Giftbox</h1>
+      </div>
+    </div>
+   <%= simple_form_for @user do |f| %>
+    <%= f.input :username %>
+    <%= f.input :password %>
+    <%= f.button :submit %> -->
+<% end %>
+  
+  <br>
+  <br>
+  <br>
+
+
+  <div class="container-fluid splash_left_and_right">
+    <div class="row">
+
+      <!-- Start Left Side -->
+
+      <div class="col-xs-12">
+  
+          Mission
+        </h3>
+        <br>
+
+        <h4 class = "line">
+          Our mission is to help build community, reduce waste, and help combat the dire effects of food deserts.
+        </h4>
+
+        <h3 class = "text-left, subhead">
+          What are Food Deserts?
+        </h3>
+
+        <h4>
+          The USDA defines food deserts as "urban neighborhoods and rural towns without ready access to fresh, healthy, and affordable food."
+        </h4>
+
+        <h3 class = "text-left, subhead">
+          Where are They?
+        </h3>
+
+          <br>
+          <br>
+
+          <div class = "map"> 
+
+            <img src = "http://s17.postimg.org/nd5vnmyhr/Snip20150331_1.png">
+
+          </div>
+        </h4>
+        <br>
+
+        <h3>About Us</h3>
+
+        <br>
+
+        <h4 class = "line">
+          Three guys, a girl, and a plan to change lives and communities--for the better. While attending General
+          Assembly's Web Development Immersive program in San Francisco, CA, in 2015, we were tasked with working as a group to create a cool, new app.
+          <br>
+          <br>
+          After racking our brains for an idea, we all got excited about helping others connect with needed resources; while building bridges in communities; and facilitating the growth of a true, non-commercialized sharing economy. And, voilà! SHAREit was born.
+          <br>
+          <br>
+          We'll stick to this story for now. If we told you our real origin story, we might just blow your minds--considering there's a generous smattering of alien worlds, super powers, and the requisite battle between
+          good and evil.
+        </h4>
+      </div>
+
+      <!-- Start Right Side -->
+
+      <div class="col-md-4 col-md-offset-4 splash_right">
+        <div class="col-xs-12">
+          <h3 class = "text-left, subhead">
+            How does one <span>SHAREit</span>?
+          </h3>
+          <br>
+          <h4>
+            <p class = "line2">1. Fillout your profile.</p>
+            <p class = "indent" class = "line2">a. Start with interests so we can match you with people in your community with similar interests.</p>
+            <p class = "indent" class = "line2">b. List what you might want to borrow.</p>
+            <p class = "indent" class = "line2">c. List what you are willing to lend.</p>
+            <p class = "line2">2. Search for matches.</p>
+            <p class = "line2">3. Share and borrow.</p>
+            <p class = "line2">4. Meet cool new folks.</p>
+            <p class = "line2">5. Rinse and repeat :)</p>
+          </h4>
+        </div>
+
+        <h2>The creators:</h2>
+        <div class="row">
+          <div class="col-xs-6">
+            <a href="https://www.linkedin.com/pub/jenni-choi/9/192/112" target="_blank">
+              <img src="http://s29.postimg.org/476bl8bbb/Jenni_Choi_Photo.jpg" class = "picbox"/>
+            </a><h5>Jenni Choi</h5>
+          </div>
+          <div class="col-xs-6">
+            <a href="https://www.linkedin.com/in/edlyonhart" target="_blank">
+              <img src="http://s22.postimg.org/fbvn8zmcx/Eli_Lyonhart_photo.jpg" class = "picbox"/>
+            </a><h5>Eli Lyonhart</h5>
+          </div>
+        </div>          <!-- End Top Portraits -->
+
+        <div class="row">
+          <div class="col-xs-6">
+            <a href="https://www.linkedin.com/in/georgenavas" target="_blank">
+              <div class = "image"><img src="http://s15.postimg.org/fy2wj3ikr/George_Navas.jpg" class = "picbox" /></div>
+            </a><h5>George Navas</h5>
+          </div>
+          <div class="col-xs-6">
+            <a href="www.linkedin.com/in/wilsonryanc" target="_blank">
+              <img src="http://s7.postimg.org/90fqs8bgr/Ryan_Wilson.jpg" class = "picbox"/>
+            </a><h5>Ryan Wilson</h5>
+          </div>
+        </div>            <!-- End Bottom Portraits -->
+      </div>
+    </div>          <!-- End Right Scroll -->
+  </div>            <!-- End Scrolling Sides -->
+
+
+  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container">
+      <div class = "row">
+        <h4 class = "text-center">Contact Us</h4>
+      </div>
+      <div class="row">
+        <div class="span4"></div>
+        <div class="span4"><a href="mailto:shareit.wdi@gmail.com">
+
+        <!--   <img class="center-block" src="https://s1.postimg.org/g0g1dxp2z/Contact_Us.png" /></a>
+ -->
+          <img class="center-block" src="http://s1.postimg.org/g0g1dxp2z/Contact_Us.png" /></a>
+
+        </div>
+        <div class="span4"></div>
+      </div>
+    </div>
+  </nav>
+</div>
+
