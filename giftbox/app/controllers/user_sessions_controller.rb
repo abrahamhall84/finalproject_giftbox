@@ -1,38 +1,31 @@
 class UserSessionsController < ApplicationController
+
   def index
     @users = User.all
+  end
+  def new
+    @user = User.new
   end
 
   def create
     @user = User.create user_params
-      if user.save where :role == "gifter"
+      if user.save
         session[:user_id] = user.id
-        session[:role] = "gifter"
-        redirect_to home_path, notice: "Success!" 
-      elsif user.save where :role == "giftee"
-        session[:user_id] = user.id
-        redirect_to home_path, notice: "Success!"  
+        redirect_to user_path, notice: "Success!"   
       else 
         render :signup
       end
   end
 
   def attempt_login
-    if params[:username].present? && params[:password].present?
-      found_gifter = User.where(username: params[:username] && role: params[:role]).first
-      found_giftee = User.where(username: params[:username] && role: params[:role]).first
-      if found_gifter
-        authorized_gifter = found_gifter.authenticate(params[:password])
-          if authorized_gifter
-            redirect_to user_path(authorized_gifter)
-          else
-            flash[:error] = "Your username or password is invalid"
-            redirect_to root_path
-          end
-      elsif found_giftee
-        authorized_giftee = found_giftee.authenticate(params[:password])
-          if authorized_giftee
-            redirect_to user_path(authorized_giftee)
+   
+    user = params[:user]
+    if user[:username].present? && user[:password].present?
+      found_user = User.where(username: user[:username]).first
+      if found_user
+        authorized_user = found_user.authenticate(user[:password])
+          if authorized_user
+            redirect_to user_path(authorized_user)
           else
             flash[:error] = "Your username or password is invalid"
             redirect_to root_path
@@ -54,6 +47,6 @@ class UserSessionsController < ApplicationController
 
   private
   def user_params 
-    params.require(:profile).permit(:username, :first_name, :last_name, :role, :email, :address, :password, :password_digest)
+    params.require(:profile).permit(:username, :first_name, :last_name, :is_gifter, :email, :address, :password, :password_digest)
   end
 end

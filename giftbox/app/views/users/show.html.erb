@@ -1,16 +1,15 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 
-<%if @user.role == 'gifter' %>
+<%if @user.is_gifter? %>
 
-<div></div>
-<p></p>
-<% elseif @user.role == "giftee" %>
-<div></div>
+<div>THIS USER IS A GIFTER</div>
+
+<% else%>
+<div>THIS USER IS A GIFTEE</div>
 
 <% end %>
 
 
 
-append form of quantity, item, drop_off time (product), (drop off time)
 

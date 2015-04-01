@@ -36,9 +36,9 @@ ActiveRecord::Schema.define(version: 20150331192059) do
     t.string   "username"
     t.string   "password"
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "role"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.boolean  "is_gifter",       default: false
   end
 
 end
