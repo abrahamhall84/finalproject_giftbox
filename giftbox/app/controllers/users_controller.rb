@@ -1,11 +1,16 @@
 class UsersController < ApplicationController
-  def new
-    @user = User.new
-    @gifter 
-    
-  end
-
-  class Gifter < User
+  
+  def create
+    @user= User.new user_params
+    if @role == 'gifter'
+      @user.role = 'gifter'
+    elsif @role == 'giftee'
+      @user.role = 'giftee'
+    end 
+    if @user  
+  end 
+end
+class Gifter < User
     def index
 
     end
@@ -19,8 +24,8 @@ class UsersController < ApplicationController
 
     def edit
     end
-  end
-  class Giftee < User
+end
+class Giftee < User
     def index
     end
 
