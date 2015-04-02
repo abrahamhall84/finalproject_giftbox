@@ -22,12 +22,13 @@ class ItemsController < ApplicationController
     array.each_with_index do |item, index|
       tempArray = array.dup
       tempArray.each do |diffItem|
-        if item['product'] == diffItem['product']
-          sums += item + diffItem
+        if item[:product] == diffItem[:product]
+          sums += item[:give_quantity] + diffItem[:give_quantity]
         end
       end
     end
     puts sums
+    redirect_to user_items_path
   end
   
   def edit
