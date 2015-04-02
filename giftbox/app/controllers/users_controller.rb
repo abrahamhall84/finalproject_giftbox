@@ -1,51 +1,54 @@
 class UsersController < ApplicationController
-    def new
-        @user = User.new
-    end 
+  def new
+    @user = User.new
+  end 
+  
   def create
     puts user_params
     @user = User.new user_params
     if @user.save
-    #   @user.save
+      #   @user.save
       redirect_to user_path(@user)
-    # elsif giftee
-    #   @user.save
-    #   redirect_to user_path 
+      # elsif giftee
+      #   @user.save
+      #   redirect_to user_path 
     else 
-        render :new
+      render :new
     end
   end 
+
 def show
-        @user = User.find_by_id(params[:id])
-        @item = Item.new 
-    end
-    def edit
-        @user = User.find_by_id(params[:id])
-        
-    end
-    def update
-      @user = User.find_by_id(params[:id])
-      if @user.update_attributes user_params
-          redirect_to user_path @user, notice: "Successfully edited"
-        else
-          flash[:error] = "Your information is incomplete"
-          redirect_to edit_user_path
-      end
-    end
+  @user = User.find_by_id(params[:id])
+  @item = Item.new 
+end
+
+def edit
+  @user = User.find_by_id(params[:id])
+
+end
+def update
+  @user = User.find_by_id(params[:id])
+  if @user.update_attributes user_params
+    redirect_to user_path @user, notice: "Successfully edited"
+  else
+    flash[:error] = "Your information is incomplete"
+    redirect_to edit_user_path
+  end
+end
 
 
-    def destroy
-        @user = User.find_by_id(params[:id])
-        @user.delete
-        redirect_to root_path
-    end
-  
+def destroy
+  @user = User.find_by_id(params[:id])
+  @user.delete
+  redirect_to root_path
+end
+
 
  # class Gifter < User
  #    def index
 
 
-   
+
 
  #    def new
  #        @gifter = Gifter.new
@@ -105,10 +108,10 @@ def show
  #    redirect_to root_path
  #  end
  # end
-  private
-  def user_params
-    params.require(:user).permit(:username, :first_name, :last_name, :email, :address, :password, :password_digest, :is_gifter) 
-  end
+ private
+ def user_params
+  params.require(:user).permit(:username, :first_name, :last_name, :email, :address, :password, :password_digest, :is_gifter) 
+end
   # def set_role_type
   #   # We ensure that the account_type coming from the registration form is valid
   #   raise 'Error message OR for validation error' unless %w[gifter giftee].include? params[:role]
@@ -117,4 +120,4 @@ def show
 
 
     # end
-end 
+  end 
