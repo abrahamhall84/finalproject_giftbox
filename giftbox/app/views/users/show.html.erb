@@ -1,5 +1,8 @@
 <%= render 'partials/header' %>
+
 <%= render 'partials/navbar2' %>
+
+
 
 <%if @user.is_gifter %>
 
@@ -11,33 +14,39 @@
 <br>
 
  <%= simple_form_for  [@user, @item], url: "/users/#{@user.id}/items" do |f| %>
+
 <div class="col-md-4"></div>
 <div class="col-md-4">
 <div class = "user_dropdown">
-    <p>Item to Donate</p> 
-    <div class = "product">
 
-    <%= f.input :product, :collection => ['Apples','Orange','Lemon','Carrot','Tomato'] %>
+
+<div id = "user_submit">
+
+    <p>Item to Donate</p> 
+<div id = "product">
+
+ <%= f.input :product, :collection => ['Apples','Orange','Lemon','Carrot','Tomato'] %>
     </div>
   </div>
     <p>Quantity</p>
-    <div class = "quantity">
+    <div id = "quantity">
     <%= f.input :give_quantity %>
     </div>
     <p>Drop Off Day/Time</p>
-    <div class = "drop_off">
+    <div id = "drop_off">
     <%= f.input :drop_off, :collection => ['Tues/6 p.m.','Thurs/6 p.m.'] %>
      </div>
-     <%= f.submit %>
+     <div id="submit" ><%= f.submit %></div>
      <% end %>
+      <br>
+    <br>
+    <ul></ul>
 </div>
 </div>
 <div class="col-md-4"></div>
 
 
-    <br>
-    <br>
-    <ul></ul>
+   
 
 
 <% else%>

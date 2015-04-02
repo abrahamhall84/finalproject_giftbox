@@ -1,15 +1,15 @@
 <%= render 'partials/header' %>
-
+<%= render 'partials/navbar2.html.erb' %>
 <h3>products</h3>
 
 <% @items.each do |item| %>
 <%= item.product %>
-<%= item.give_quantity %>
+<%= item.give_quantity %> <%= sums %>
 <%= item.drop_off %>
 <% end %>
 
 
-
+<ul class = "item_list"></ul>
 
   
 
