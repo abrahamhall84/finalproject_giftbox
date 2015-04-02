@@ -1,19 +1,18 @@
 <%= render 'partials/header' %>
 <%= render 'partials/navbar2' %>
 
-
+<div class = container>
 <br>
 <br>
 <br>
 
 <div class= "row text-center">
-<h1>New Users</h1>
+<h1 class = "darken"> New Users</h1>
 </div>
 <br>
 <br>
-
 <div class="col-md-4"></div>
-<div class="col-md-4">
+<div class="col-md-4 darken">
 <%= simple_form_for @user, :url => users_path, :method => :post do |f| %>
   <%= f.input :first_name %>
   <%= f.input :last_name %>
@@ -30,5 +29,8 @@
 <% end %>
 </div>
 <div class="col-md-4"></div>
+</div>
+
+
 
 

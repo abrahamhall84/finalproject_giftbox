@@ -1,8 +1,18 @@
 <%= render 'partials/header' %>
+<%= render 'partials/navbar2' %>
 
 <%if @user.is_gifter %>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
  <%= simple_form_for  [@user, @item], url: "/users/#{@user.id}/items" do |f| %>
+<div class="col-md-4"></div>
+<div class="col-md-4">
 <div class = "user_dropdown">
     <p>Item to Donate</p> 
     <div class = "product">
@@ -21,6 +31,8 @@
      <%= f.submit %>
      <% end %>
 </div>
+</div>
+<div class="col-md-4"></div>
 
 
     <br>

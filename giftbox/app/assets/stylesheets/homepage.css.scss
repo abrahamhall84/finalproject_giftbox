@@ -18,3 +18,12 @@
 .right {
   text-align: right;
 }
+
+.new-background-image {
+  background: url(http://s8.postimg.org/cjv8z2g9x/veggie_garden.jpg) no-repeat; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
