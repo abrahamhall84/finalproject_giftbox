@@ -3,6 +3,7 @@ class UsersController < ApplicationController
         @user = User.new
     end 
   def create
+    puts user_params
     @user = User.new user_params
     if @user.save
     #   @user.save
@@ -20,7 +21,9 @@ class UsersController < ApplicationController
     end
 
     def show
+        @items = Item.all
         @user = User.find_by_id(params[:id])
+        @item = Item.new 
     end
   
 
