@@ -2,10 +2,14 @@
 
 <%if @user.is_gifter %>
 
+<div>THIS USER IS A GIFTER</div>
+
+ <%= simple_form_for  [@user, @item], url: "/users/#{@user.id}/items" do |f| %>
 <div class = "user_dropdown">
-    <p>Item to Donate</p>
+    <p>Item to Donate</p> 
     <div class = "product">
-    <%= f.input :product, :collection => ['Apple','Orange','Lemon','Carrot','Tomato'] %>
+
+    <%= f.input :product, :collection => ['Apples','Orange','Lemon','Carrot','Tomato'] %>
     </div>
   </div>
     <p>Quantity</p>
@@ -16,7 +20,11 @@
     <div class = "drop_off">
     <%= f.input :drop_off, :collection => ['Tues/6 p.m.','Thurs/6 p.m.'] %>
      </div>
+     <%= f.submit %>
+     <% end %>
 </div>
+
+
     <br>
     <br>
     <ul></ul>
@@ -27,7 +35,7 @@
 <% else%>
 <div>THIS USER IS A GIFTEE</div>
 
-
+<%= simple_form_for  :item, url: user_path, method: "post" do |f| %>
 
 
 <div class = "user_dropdown">
@@ -40,9 +48,10 @@
   <%= f.input :pick_up, :collection => ['Wed/7 p.m.','Thurs/7 p.m.'] %>
 </div>
   <br>
+   <%= f.submit %>
   <br>
   <ul></ul>
 
-
+<% end %>
 <% end %>
 
