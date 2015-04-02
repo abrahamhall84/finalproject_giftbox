@@ -1,8 +1,6 @@
 <%= render 'partials/header' %>
 
-<%= render 'partials/navbar2' %>
-
-
+<%= render partial: 'partials/navbar2', locals: {user: @user} %>
 
 <%if @user.is_gifter %>
 
