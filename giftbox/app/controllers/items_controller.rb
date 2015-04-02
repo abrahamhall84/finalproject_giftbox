@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-   
+   @user = User.new
   end
   def create
    @user = User.find_by_id(params[:user_id])
@@ -27,11 +27,12 @@ class ItemsController < ApplicationController
         end
       end
     end
-    puts sums
+    return sums
     redirect_to user_items_path
   end
   
   def edit
+    
   end
   private
   def item_params

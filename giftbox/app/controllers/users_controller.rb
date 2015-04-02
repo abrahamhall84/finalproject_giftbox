@@ -21,7 +21,6 @@ class UsersController < ApplicationController
     end
 
     def show
-        @items = Item.all
         @user = User.find_by_id(params[:id])
         @item = Item.new 
     end
