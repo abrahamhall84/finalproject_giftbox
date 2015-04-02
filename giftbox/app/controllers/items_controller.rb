@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   def index
+    @items = Item.all
    
   end
 
@@ -10,31 +11,23 @@ class ItemsController < ApplicationController
    @user = User.find_by_id(params[:user_id])
     @item = Item.create(item_params)
    @item.save
-    redirect_to  :controller => :user, :action => :show
+    redirect_to  user_items_path
   end 
-  # def create
-#   @user = User.new(params[:user])
-#   if @user.save
-#     redirect_to :action => :index
-#   else
-#     @title = "Sign up"
-#     render 'new'
-#   end
-# end
   def show
-    
-    @item_sum = Item.all.where item[:product] #params[:collection] 
-      # add all item.give_quantity
-
-    @item_sum.each do |item|
-     if item.give_quantity
-
-      # add all 
-     else 
-      item.want_quantity
-      #subtract amt  
+    @user = User.find_by_id(params[:user_id])
+    @item = Item.find_by_id(params[:id])
+    @items = Item.all 
+    array = @items
+    sums = 0
+    array.each_with_index do |item, index|
+      tempArray = array.dup
+      tempArray.each do |diffItem|
+        if item['product'] == diffItem['product']
+          sums += item + diffItem
+        end
+      end
     end
-    end
+    puts sums
   end
   
   def edit
