@@ -1,8 +1,7 @@
-
+<%= render 'partials/header' %>
+<%= render 'partials/navbar2.html.erb' %>
 
 <%if @user.is_gifter %>
-
-<div>THIS USER IS A GIFTER</div>
 
  <%= simple_form_for  [@user, @item], url: "/users/#{@user.id}/items" do |f| %>
 
@@ -32,10 +31,7 @@
    
 
 
-<div>THIS USER IS A GIFTER</div>
-
 <% else%>
-<div>THIS USER IS A GIFTEE</div>
 
 <%= simple_form_for  :item, url: user_path, method: "post" do |f| %>
 

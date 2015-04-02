@@ -15,14 +15,29 @@ class UsersController < ApplicationController
         render :new
     end
   end 
-
-    def edit
-        @user = User.find_by_id(params[:id])
-    end
-
-    def show
+def show
         @user = User.find_by_id(params[:id])
         @item = Item.new 
+    end
+    def edit
+        @user = User.find_by_id(params[:id])
+        
+    end
+    def update
+      @user = User.find_by_id(params[:id])
+      if @user.update_attributes user_params
+          redirect_to user_path @user, notice: "Successfully edited"
+        else
+          flash[:error] = "Your information is incomplete"
+          redirect_to edit_user_path
+      end
+    end
+
+
+    def destroy
+        @user = User.find_by_id(params[:id])
+        @user.delete
+        redirect_to root_path
     end
   
 
