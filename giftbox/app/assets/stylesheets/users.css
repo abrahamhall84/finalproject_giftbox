@@ -1,0 +1,17 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.darken {
+  color: black;
+}
+
+.container{
+  background: url(http://s8.postimg.org/cjv8z2g9x/veggie_garden.jpg) no-repeat; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.65;
+}
+

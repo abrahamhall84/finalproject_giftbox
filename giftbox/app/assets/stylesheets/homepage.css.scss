@@ -1,0 +1,29 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.background {
+  background: url(http://s18.postimg.org/4yhgxwovt/apples.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.darken {
+  color: black;
+}
+
+.right {
+  text-align: right;
+}
+
+.new-background-image {
+  background: url(http://s8.postimg.org/cjv8z2g9x/veggie_garden.jpg) no-repeat; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+

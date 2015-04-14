@@ -1,0 +1,117 @@
+<%= render 'partials/header' %>
+
+
+<div class="std_background">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class = "navbar-header">
+        <a class="navbar-brand" href="">The GiftBox</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+ </div>
+
+    <br>
+    <br>
+    <br>
+  <div class = "background">
+  <div class= "row text-center">
+    <h1 class = "darken">The GiftBox</h>
+  </div>
+  <div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 darken">
+   <%= simple_form_for  :user, url: login_path do |f| %>
+    <%= f.input :username %>
+    <%= f.input :password %>
+    <%= f.button :submit %>
+    <% end %>
+  </div>
+  <div class="col-md-4"></div>
+  </div>
+  </div>
+    <br>
+    <br>
+  <div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
+    <%= link_to "Sign Up", new_user_path %>
+  </div>
+  <div class="col-md-4">
+  </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Start Left Side -->
+    <div class="col-md-4"><h3>
+          Mission
+        </h3>
+        <br>
+        <h4>
+          Our mission is to help build community, reduce waste, and help combat the dire effects of food deserts.
+        </h4>
+    </div>
+    <div class="col-md-4">
+        <h3>
+          What are Food Deserts?
+        </h3>
+          <br>
+          <h4>
+          The USDA defines food deserts as "urban neighborhoods and rural towns without ready access to fresh, healthy, and affordable food."
+          </h4>
+          <br>
+        <h3>Where are they?
+        </h3>
+          <br>
+    <div class="map">
+          <img src = "http://s17.postimg.org/nd5vnmyhr/Snip20150331_1.png">
+    </div>
+    </div>
+    <div class="col-md-4">
+        <h3>How do you use GiftBox?
+        </h3>
+        <br>
+          <h4>
+          1. Click the Signup Link.
+          <br>
+          <br>
+          2. Fill out the Sign Up form and identify yourself as a Gifter or a Giftee.
+          <br>
+          <br>
+             * A Gifter wants to donate fresh produce from his/her garden, tree, or farm.
+          <br>
+          <br>
+             * A Giftee wants to reserve an order for specific quantities of donated produce.
+          <br>
+          <br>
+          3. Go to your Dashboard page and specify what items you want to donate or receive. 
+          <br>
+          <br>
+          4. Gifters drop-off items at The Community Center at a designated date and time.
+          <br>
+          <br>
+          5. Giftees pick-up reserved orders at The Community Center at a designated date and time. 
+</div> 
+        <br>
+   
+
+        
+
+      <!-- Start Right Side -->
+
+  
+

@@ -1,0 +1,36 @@
+<%= render 'partials/header' %>
+
+
+<div class = container>
+<br>
+<br>
+<br>
+
+<div class= "row text-center">
+<h1 class = "darken"> New Users</h1>
+</div>
+<br>
+<br>
+<div class="col-md-4"></div>
+<div class="col-md-4 darken">
+<%= simple_form_for @user, :url => users_path, :method => :post do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :username %>
+  <%= f.input :password%>
+
+  <%= f.label :is_gifter, 'Gifter?' %>
+  <%= f.check_box :is_gifter%>
+
+  <%= f.button :submit %>
+<% end %>
+</div>
+<div class="col-md-4"></div>
+</div>
+
+
+
+
