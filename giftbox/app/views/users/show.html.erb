@@ -34,7 +34,7 @@
     <div id = "drop_off">
     <%= f.input :drop_off, :collection => ['Tues/6 p.m.','Thurs/6 p.m.'] %>
      </div>
-     <div id="submit" ><%= f.submit %></div>
+     <div id="submit" ><%= f.submit 'save' %></div>
      <% end %>
       <br>
     <br>
@@ -51,9 +51,13 @@
 
 <%= simple_form_for  :item, url: user_path, method: "post" do |f| %>
 
-
+<div class="col-md-4"></div>
+<div class="col-md-4">
 <div class = "user_dropdown">
-  
+  <br>
+  <br>
+  <br>
+  <br>
   <p>Item Requested</p>
   <%= f.input :product, :collection => ['Apple','Orange','Lemon','Carrot','Tomato'] %>
   <p>Quantity</p>
@@ -62,9 +66,11 @@
   <%= f.input :pick_up, :collection => ['Wed/7 p.m.','Thurs/7 p.m.'] %>
 </div>
   <br>
-   <%= f.submit %>
+   <%= f.submit 'save' %>
   <br>
   <ul></ul>
+</div>
+<div class="col-md-4">
 
 <% end %>
 <% end %>
