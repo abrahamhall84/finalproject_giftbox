@@ -21,21 +21,22 @@
     <br>
     <br>
     <br>
-  <div class = "background">
-  <div class= "row text-center">
-    <h1 class = "darken">The GiftBox</h>
-  </div>
-  <div class="row">
-  <div class="col-md-4"></div>
-  <div class="col-md-4 darken">
-   <%= simple_form_for  :user, url: login_path do |f| %>
-    <%= f.input :username %>
-    <%= f.input :password %>
-    <%= f.button :submit %>
-    <% end %>
-  </div>
-  <div class="col-md-4"></div>
-  </div>
+  <div class="background">
+    <div class= "row text-center">
+      <h1 class = "darken">The GiftBox</h>
+    </div>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 darken">
+       <%= simple_form_for  :user, url: login_path do |f| %>
+        <%= f.input :username %>
+        <%= f.input :password %>
+        <%= f.submit 'Submit' %>
+        <% end %>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+
   </div>
     <br>
     <br>
@@ -53,6 +54,8 @@
     <br>
     <br>
 
+<hr>
+
   <div class="container-fluid">
     <div class="row">
 
@@ -60,6 +63,9 @@
     <div class="col-md-4"><h3>
           Mission
         </h3>
+        <br>
+
+
         <br>
         <h4>
           Our mission is to help build community, reduce waste, and help combat the dire effects of food deserts.
@@ -70,6 +76,7 @@
           What are Food Deserts?
         </h3>
           <br>
+
           <h4>
           The USDA defines food deserts as "urban neighborhoods and rural towns without ready access to fresh, healthy, and affordable food."
           </h4>
@@ -77,6 +84,7 @@
         <h3>Where are they?
         </h3>
           <br>
+
     <div class="map">
           <img src = "http://s17.postimg.org/nd5vnmyhr/Snip20150331_1.png">
     </div>
@@ -105,8 +113,18 @@
           <br>
           <br>
           5. Giftees pick-up reserved orders at The Community Center at a designated date and time. 
-</div> 
-        <br>
+    </div> 
+</div>
+    <br>
+    <br>
+    <br>
+<div>
+        <nav class="navbar navbar-default navbar-fixed-bottom footer">
+    <div class="container">
+    </div>
+        </nav>
+</div>
+
    
 
         

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :users do 
     resources :items
   end
+
+  get 'items' => 'items#index', :as => :items
  
   post 'login' => 'user_sessions#attempt_login', :as => :login
   post 'logout' => 'user_sessions#logout', :as => :logout

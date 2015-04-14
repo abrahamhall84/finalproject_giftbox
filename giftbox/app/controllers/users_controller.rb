@@ -111,6 +111,7 @@ end
  private
  def user_params
   params.require(:user).permit(:username, :first_name, :last_name, :email, :address, :password, :password_digest, :is_gifter) 
+  end
 end
   # def set_role_type
   #   # We ensure that the account_type coming from the registration form is valid
@@ -119,5 +120,3 @@ end
   # end
 
 
-    # end
-  end 
